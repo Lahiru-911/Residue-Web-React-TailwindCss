@@ -1,10 +1,15 @@
+import OPVFooter from "./OPVFooter";
+
 const Footer =() => {
     return (
-        <div className="">
-
+        <div className="font-inter">
+            <div className="text-[]">
+               
+            </div>
             
-            
+            <OPVFooter></OPVFooter>
         </div>
+        
 
     );
 };
