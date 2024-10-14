@@ -1,4 +1,5 @@
-import OPVFooter from "./OPVFooter";
+// import OPVFooter from "./OPVFooter";
+import Slider from "./Slider";
 
 const Footer =() => {
     return (
@@ -7,7 +8,8 @@ const Footer =() => {
                
             </div>
             
-            <OPVFooter></OPVFooter>
+            <Slider/>
+            {/* <OPVFooter></OPVFooter> */}
         </div>
         
 
