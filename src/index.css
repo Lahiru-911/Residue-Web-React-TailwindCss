@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .paused {
-        animation-play-state: paused;
-    }
+.f-gap {
+    @apply text-[28px] font-medium capitalize mb-8
 }
