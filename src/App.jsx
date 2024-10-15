@@ -1,9 +1,10 @@
-import ContactUs from "./Components/ContactUs";
+import ContactUs from "./Pages/ContactUs";
+
 
 export default function App() {
   return (
     <div>
-      <ContactUs />
+     <ContactUs/>
     </div>
   );
 }

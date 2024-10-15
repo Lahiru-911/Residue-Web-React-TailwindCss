@@ -6,15 +6,7 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
-      animation: {
-        "loop-scroll": "loop-scroll 15s linear infinite",
-      }, 
-      keyframes: {
-        "loop-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
-      },
+      
     },
   },
   plugins: [],
