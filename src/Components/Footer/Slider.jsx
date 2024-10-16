@@ -2,10 +2,10 @@ import Marquee from "react-fast-marquee";
 const Slider = () => {
   return (
     <>
-    <div className="bg-white">
+    <div className="bg-white ">
       {/* Text-Tagline */}
-      <div className="my-5 font-light text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <div className="m-12 mt-2 font-light text-center">
+        <h1 className="text-3xl font-light sm:text-4xl md:text-5xl lg:text-6xl">
           Our Partners & Vendors
         </h1>
       </div>

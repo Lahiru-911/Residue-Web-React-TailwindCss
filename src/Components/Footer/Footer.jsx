@@ -5,9 +5,12 @@ import SubFooter from "./SubFooter";
 const Footer = () => {
   return (
     <>
-      <div className="w-full h-screen bg-[#E6F2FF] font-inter">
+      <div className="w-full h-auto font-inter bg-[#E6F2FF]">
         <Slider />
         <SubFooter/>
+
+
+        
       </div>
     </>
   );
