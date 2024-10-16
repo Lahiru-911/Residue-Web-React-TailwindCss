@@ -19,52 +19,52 @@ const Slider = () => {
       >
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p8.png"
+          src="https://openseauserdata.com/files/660d1a2fd7fc203dcc90d541d14443c5.jpg"
           alt="Singer"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p4.png"
+          src="https://i.seadn.io/s/raw/files/6ff30efb6250bc4d9ab52cb99f55be75.png?auto=format&dpr=1&w=1000"
           alt="Sony"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p8.png"
+          src="https://openseauserdata.com/files/660d1a2fd7fc203dcc90d541d14443c5.jpg"
           alt="Singer"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p4.png"
+          src="https://i.seadn.io/s/raw/files/6ff30efb6250bc4d9ab52cb99f55be75.png?auto=format&dpr=1&w=1000"
           alt="Sony"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p8.png"
+          src="https://openseauserdata.com/files/660d1a2fd7fc203dcc90d541d14443c5.jpg"
           alt="Singer"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p4.png"
+          src="https://i.seadn.io/s/raw/files/6ff30efb6250bc4d9ab52cb99f55be75.png?auto=format&dpr=1&w=1000"
           alt="Sony"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p8.png"
+          src="https://openseauserdata.com/files/660d1a2fd7fc203dcc90d541d14443c5.jpg"
           alt="Singer"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p4.png"
+          src="https://i.seadn.io/s/raw/files/6ff30efb6250bc4d9ab52cb99f55be75.png?auto=format&dpr=1&w=1000"
           alt="Sony"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p8.png"
+          src="https://openseauserdata.com/files/660d1a2fd7fc203dcc90d541d14443c5.jpg"
           alt="Singer"
         />
         <img
           className="w-20 h-auto p-2 border sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-none"
-          src="../img/p4.png"
+          src="https://i.seadn.io/s/raw/files/6ff30efb6250bc4d9ab52cb99f55be75.png?auto=format&dpr=1&w=1000"
           alt="Sony"
         />
       </Marquee>
