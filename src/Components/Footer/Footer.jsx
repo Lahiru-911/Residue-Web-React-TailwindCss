@@ -8,8 +8,7 @@ const Footer = () => {
       <div className="w-full h-auto font-inter bg-[#E6F2FF]">
         <Slider />
         <SubFooter/>
-
-
+  
         
       </div>
     </>
