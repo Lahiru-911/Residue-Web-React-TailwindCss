@@ -23,6 +23,7 @@ const SubFooter = () => {
                 className="text-black hover:text-[#0081FB]"
               >
                 (+94) 74 277 7201
+                (+94) 74 271 8994
               </a>
             </p>
             <address className="not-italic text-black hover:text-[#0081FB]">

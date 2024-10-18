@@ -5,34 +5,51 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export function WavyBackgroundDemo() {
   return (
-    <WavyBackground className="font-normal text-center text-white font-inter">
-      <p className="m-3 text-4xl md:text-5xl lg:text-8xl">
-        We’d Love To Hear From <a className="text-[#0081FB]">You.</a>
-      </p>
+    <WavyBackground className="font-normal text-white font-inter">
+      <div className="text-center">
+        <p className="mt-12 text-4xl sm:text-6xl md:text-6xl lg:text-8xl md:mt-28">
+          We’d Love To Hear From <a className="text-[#0081FB]">You.</a>
+        </p>
 
-      <p className="m-3 text-base md:text-lg">
-        Have Questions, Need Support, or Want to Share Feedback? Our Team is
-        Here to Assist You Every Step of the Way.
-        <br />
-        Reach Out and Connect with Us Today!
-      </p>
+        <p className="p-3 m-4 text-xl font-light sm:p-5 sm:m-8 sm:text-xl md:text-3xl">
+          Have Questions, Need Support, or Want to Share Feedback? Our Team is
+          Here to Assist You Every Step of the Way.
+          <br />
+          Reach Out and Connect with Us Today!
+        </p>
+      </div>
 
-      <div className="grid gap-8 lg:gap-20 md:grid-cols-3 sm:grid-cols-1">
-        <div className="flex flex-col items-center gap-3 md:items-start">
-          <FiPhoneCall className="mt-2 text-2xl" />
-          <p className="text-sm text-center md:text-left md:text-base">
+      {/* Flex container for contact details */}
+      <div className="flex flex-col items-center justify-between gap-8 mx-5 mt-16 md:flex-row sm:mx-10 md:mx-20 md:mt-28 md:gap-0">
+        
+        {/* Phone section */}
+        <div className="flex flex-col items-center gap-5 text-center md:items-start md:text-left md:flex-row">
+          <FiPhoneCall className="text-2xl sm:text-3xl" />
+          <p className="text-sm sm:text-base">
             Phone
             <br />
-            (+94) 74 277 7201
+            <a
+              href="tel:(+94) 74 277 7201"
+              className="text-white hover:text-[#0081FB]"
+            >
+              (+94) 74 277 7201
+            </a>
             <br />
-            (+94) 74 271 8994
+            <a
+              href="tel:(+94) 74 271 8994"
+              className="text-white hover:text-[#0081FB]"
+            >
+              (+94) 74 271 8994
+            </a>
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-3 md:items-start">
-          <MdEmail className="mt-1 text-2xl" />
-          <p className="text-sm text-center md:text-left md:text-base">
-            Our Email <br />
+        {/* Email section */}
+        <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left md:flex-row">
+          <MdEmail className="text-2xl sm:text-3xl" />
+          <p className="text-sm sm:text-base">
+            Our Email
+            <br />
             <a
               className="text-white hover:text-[#0081FB]"
               href="mailto:prabath@residuesolution.com"
@@ -42,21 +59,25 @@ export function WavyBackgroundDemo() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-3 md:items-start">
-          <IoLocationSharp className="text-2xl" />
-          <address className="text-sm not-italic text-center md:text-base md:text-left">
+        {/* Location section */}
+        <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left md:flex-row">
+          <IoLocationSharp className="text-2xl sm:text-3xl" />
+          <address className="text-sm sm:text-base">
             <a
-              className="text-white hover:text-[#0081FB]"
+              className="text-white hover:text-[#0081FB] not-italic"
               href="https://maps.app.goo.gl/bnu6oNjbhpJUdtbEA"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p>No. 323,</p>
-              <p>Colombo Main Road,</p>
-              <p>Colombo 05.</p>
+              No. 323,
+              <br />
+              Colombo Main Road,
+              <br />
+              Colombo 05.
             </a>
           </address>
         </div>
+        
       </div>
     </WavyBackground>
   );

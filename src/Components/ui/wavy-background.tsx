@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "../../lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
@@ -12,18 +13,10 @@ export const WavyBackground = ({
   blur = 10,
   speed = "fast",
   waveOpacity = 0.5,
-  canvasWidth = "100%",   // Set width as prop, default to 100%
-  canvasHeight = "100vh", // Set height as prop, default to 100% viewport height
   ...props
 }) => {
   const noise = createNoise3D();
-  let w,
-    h,
-    nt,
-    i,
-    x,
-    ctx,
-    canvas;
+  let w, h, nt, i, x, ctx, canvas;
   const canvasRef = useRef(null);
 
   const getSpeed = () => {
@@ -40,28 +33,24 @@ export const WavyBackground = ({
   const init = () => {
     canvas = canvasRef.current;
     ctx = canvas.getContext("2d");
-
-    // Set canvas width and height to custom or default values
-    w = ctx.canvas.width = typeof canvasWidth === "number" ? canvasWidth : window.innerWidth;
-    h = ctx.canvas.height = typeof canvasHeight === "number" ? canvasHeight : window.innerHeight;
-
+    w = ctx.canvas.width = window.innerWidth;
+    h = ctx.canvas.height = window.innerHeight;
     ctx.filter = `blur(${blur}px)`;
     nt = 0;
-
     window.onresize = function () {
-      w = ctx.canvas.width = typeof canvasWidth === "number" ? canvasWidth : window.innerWidth;
-      h = ctx.canvas.height = typeof canvasHeight === "number" ? canvasHeight : window.innerHeight;
+      w = ctx.canvas.width = window.innerWidth;
+      h = ctx.canvas.height = window.innerHeight;
       ctx.filter = `blur(${blur}px)`;
     };
     render();
   };
 
   const waveColors = colors ?? [
-    "#0081FB",
+    "#38bdf8",
     "#818cf8",
     "#c084fc",
     "#e879f9",
-    "#0081FB",
+    "#22d3ee",
   ];
 
   const drawWave = (n) => {
@@ -72,7 +61,7 @@ export const WavyBackground = ({
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         var y = noise(x / 800, 0.3 * i, nt) * 100;
-        ctx.lineTo(x, y + h * 0.35); // adjust for height, currently at 35% of the container
+        ctx.lineTo(x, y + h * 0.275); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();
       ctx.closePath();
@@ -97,32 +86,31 @@ export const WavyBackground = ({
 
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {
-    // Special support for Safari.
+    // I'm sorry but I have got to support it on safari.
     setIsSafari(
       typeof window !== "undefined" &&
-      navigator.userAgent.includes("Safari") &&
-      !navigator.userAgent.includes("Chrome")
+        navigator.userAgent.includes("Safari") &&
+        !navigator.userAgent.includes("Chrome")
     );
   }, []);
 
   return (
     <div
-      className={cn("relative flex flex-col items-center justify-center", containerClassName)}
-      style={{ width: canvasWidth, height: canvasHeight }}  // Set size for container as well
+      className={cn(
+        "h-screen w-full relative overflow-hidden", // Responsive classes for height and width
+        containerClassName
+      )}
+      {...props}
     >
       <canvas
         className="absolute inset-0 z-0"
         ref={canvasRef}
         id="canvas"
         style={{
-          width: canvasWidth,   // Set custom width for canvas
-          height: canvasHeight, // Set custom height for canvas
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
-      <div className={cn("relative z-10", className)} {...props}>
-        {children}
-      </div>
+      <div className={cn("relative z-10", className)}>{children}</div>
     </div>
   );
 };
