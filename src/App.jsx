@@ -5,8 +5,9 @@ import { WavyBackgroundDemo } from "./WavyBackgroundDemo";
 export default function App() {
   return (
     <div>
-     {/* <ContactUs/> */}
-    <WavyBackgroundDemo/>
+      <WavyBackgroundDemo/>
+     <ContactUs/>
+    
     
     </div>
   );
