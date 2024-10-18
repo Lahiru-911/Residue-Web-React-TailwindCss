@@ -8,16 +8,16 @@ const ContactForm = () => {
     <Card className="w-auto h-auto bg-[#FAFAFA] m-3 font-inter">
       <div className="grid grid-cols-1 gap-4 m-3 sm:grid-cols-2 md:grid-cols-2">
         <div>
-          <div className="">
+          <div>
             <h1 className="text-2xl font-light sm:text-3xl md:text-4xl lg:text-6xl">
               Hey! Tell us all the
               <br />
               <span className="text-[#0081FB]">things</span>
             </h1>
-            <p className="text-xs font-normal sm:text-xs md:text-sm lg:text-base">
+            <p className="my-2 text-xs font-normal sm:text-xs md:text-sm lg:text-base">
                 Give us a few details and we’ll offer the best solution.</p>
           </div>
-          <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6">
+          <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6">    
             <Input type="text" label="First Name" variant={variants} />
             <Input type="text" label="Last Name" variant={variants} />
             <Input type="tel" label="Contact Phone" variant={variants} />
